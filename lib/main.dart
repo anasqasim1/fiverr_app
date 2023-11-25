@@ -16,7 +16,7 @@ class MyApp extends StatefulWidget {
 class _MyAppState extends State<MyApp> {
   // This widget is the root of your application.
   int myIndex = 0;
-  List<Widget> screens = [HomeScreen(), Profile()];
+  List<Widget> screens = [const HomeScreen(), const Profile()];
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -35,7 +35,7 @@ class _MyAppState extends State<MyApp> {
           selectedItemColor: Colors.green,
           showSelectedLabels: false,
           showUnselectedLabels: false,
-          items: <BottomNavigationBarItem>[
+          items: const <BottomNavigationBarItem>[
             BottomNavigationBarItem(
                 icon: Icon(Icons.home_outlined), label: "home"),
             BottomNavigationBarItem(

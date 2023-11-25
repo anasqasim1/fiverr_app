@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
 
 class HomeScreen extends StatefulWidget {
+  const HomeScreen({super.key});
+
   @override
   State<HomeScreen> createState() => _HomeScreenState();
 }
@@ -15,8 +16,8 @@ class _HomeScreenState extends State<HomeScreen> {
           scrollDirection: Axis.vertical,
           child: Column(
             children: [
-              Padding(
-                padding: const EdgeInsets.all(10),
+              const Padding(
+                padding: EdgeInsets.all(10),
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
@@ -29,23 +30,23 @@ class _HomeScreenState extends State<HomeScreen> {
                   ],
                 ),
               ),
-              Divider(
+              const Divider(
                 thickness: 1.5,
               ),
               Positioned(
                 child: Container(
-                  margin: EdgeInsets.all(10),
+                  margin: const EdgeInsets.all(10),
                   height: 55,
                   decoration: BoxDecoration(color: Colors.white, boxShadow: [
                     BoxShadow(
-                      offset: Offset(1, 1),
+                      offset: const Offset(1, 1),
                       blurRadius: 4,
                       color: Colors.grey.withOpacity(0.5),
                     ),
                   ]),
                   child: TextField(
                     decoration: InputDecoration(
-                      contentPadding: EdgeInsets.only(left: 20, top: 15),
+                      contentPadding: const EdgeInsets.only(left: 20, top: 15),
                       icon: Icon(
                         Icons.search,
                         color: Colors.grey.withOpacity(0.8),
@@ -60,34 +61,31 @@ class _HomeScreenState extends State<HomeScreen> {
                   ),
                 ),
               ),
-              SizedBox(height: 20),
-              Container(
-                child: Padding(
-                  padding:
-                      const EdgeInsets.symmetric(vertical: 2, horizontal: 15),
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [
-                      Text(
-                        "Popular Services",
-                        style: TextStyle(
-                            fontSize: 22, fontWeight: FontWeight.w700),
-                      ),
-                      Text(
-                        "See All",
-                        style: TextStyle(
-                            fontSize: 16,
-                            fontWeight: FontWeight.w500,
-                            color: Colors.green),
-                      )
-                    ],
-                  ),
+              const SizedBox(height: 20),
+              const Padding(
+                padding: EdgeInsets.symmetric(vertical: 2, horizontal: 15),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Text(
+                      "Popular Services",
+                      style:
+                          TextStyle(fontSize: 22, fontWeight: FontWeight.w700),
+                    ),
+                    Text(
+                      "See All",
+                      style: TextStyle(
+                          fontSize: 16,
+                          fontWeight: FontWeight.w500,
+                          color: Colors.green),
+                    )
+                  ],
                 ),
               ),
-              SizedBox(
+              const SizedBox(
                 height: 15,
               ),
-              SingleChildScrollView(
+              const SingleChildScrollView(
                 scrollDirection: Axis.horizontal,
                 physics: BouncingScrollPhysics(),
                 child: Row(
@@ -119,8 +117,8 @@ class _HomeScreenState extends State<HomeScreen> {
                 scrollDirection: Axis.vertical,
                 child: Container(
                   height: 300,
-                  margin: EdgeInsets.symmetric(horizontal: 20),
-                  decoration: BoxDecoration(
+                  margin: const EdgeInsets.symmetric(horizontal: 20),
+                  decoration: const BoxDecoration(
                     image: DecorationImage(
                       image:
                           AssetImage('assets/images/bottom-banner-image.jpg'),
@@ -150,11 +148,11 @@ class services_card extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       height: 300,
-      margin: EdgeInsets.symmetric(horizontal: 10),
+      margin: const EdgeInsets.symmetric(horizontal: 10),
       child: Column(
         children: <Widget>[
           ClipRRect(
-            borderRadius: BorderRadius.vertical(top: Radius.circular(10)),
+            borderRadius: const BorderRadius.vertical(top: Radius.circular(10)),
             child: Image.asset(
               image,
               height: 150,
@@ -164,14 +162,14 @@ class services_card extends StatelessWidget {
           Container(
             height: 80,
             width: 150,
-            padding: EdgeInsets.all(5),
+            padding: const EdgeInsets.all(5),
             decoration: BoxDecoration(
                 color: Colors.white,
                 borderRadius:
-                    BorderRadius.vertical(bottom: Radius.circular(10)),
+                    const BorderRadius.vertical(bottom: Radius.circular(10)),
                 boxShadow: [
                   BoxShadow(
-                    offset: Offset(0, 10),
+                    offset: const Offset(0, 10),
                     blurRadius: 50,
                     color: Colors.grey.withOpacity(0.8),
                   )
@@ -180,7 +178,7 @@ class services_card extends StatelessWidget {
               padding: const EdgeInsets.only(top: 25, left: 10),
               child: Text(
                 title,
-                style: TextStyle(
+                style: const TextStyle(
                   fontSize: 18,
                   fontWeight: FontWeight.w500,
                 ),
