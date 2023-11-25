@@ -18,12 +18,12 @@ class _ProfileState extends State<Profile> {
   }
 
   AppBar profileAppBar() {
-    // this is some change
+    // I have done this thing.
     return AppBar(
       elevation: 0,
       backgroundColor: const Color(0xFF16561F),
       actions: const [
-         Padding(
+        Padding(
           padding: EdgeInsets.only(right: 16),
           child: Icon(Icons.diamond),
         ),
